@@ -23,7 +23,7 @@ class Dataset(data.Dataset):
 
     def __getitem__(self, idx):
         img_name = self.img_names[idx]
-        label = img_name.split('_')[0]
+        label = img_name[:-4]
         img = cv2.imread(os.path.join(self.img_root, img_name))
         #img = cv2.resize(img, (240, 80))
         lower = np.array([0, 0, 0])
