@@ -20,6 +20,8 @@ mkdir out
 php -c php/php.ini -t php/ -S 127.0.0.1:9000
 php -c php/php.ini -t php/ -S 127.0.0.1:9001
 php -c php/php.ini -t php/ -S 127.0.0.1:9002
+......
+php -c php/php.ini -t php/ -S 127.0.0.1:9009
 ```
 
 5. Run Generation Script:
