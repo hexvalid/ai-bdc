@@ -68,3 +68,11 @@ tar cfJ gendata-count250k-style18.tar.xz out/
 ```bash
 rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm -rf /tmp/bdc_void/ && mkdir /tmp/bdc_void/
 ```
+
+9. Publish
+```bash
+go get github.com/github-release/github-release
+export GITHUB_TOKEN=...
+go/bin/github-release upload --user hexvalid --repo ai-bdc --tag gendatas --name "gendata-count250k-style18" --file gendata-count250k-style18.tar.xz
+```
+
