@@ -61,7 +61,7 @@ go run gen.go
 
 7. Package:
 ```bash
-tar cfJ gendata-count250k-style18.tar.xz out/*
+tar cfJ gendata-count250k-style18.tar.xz out/
 ```
 
 8. Clean:
