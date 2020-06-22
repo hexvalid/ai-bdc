@@ -13,6 +13,7 @@ go get github.com/cheggaaa/pb/v3
 cd ai-bdc/gen
 mkdir out
 ```
+
 4. Prepare PHP-CGI:
 ```bash
 # Open up 10 php-cgi server via screen
@@ -20,10 +21,8 @@ php -c php/php.ini -t php/ -S 127.0.0.1:9000
 php -c php/php.ini -t php/ -S 127.0.0.1:9001
 php -c php/php.ini -t php/ -S 127.0.0.1:9002
 ```
-```bash
-```
 
-5. Run Generation Script
+5. Run Generation Script:
 ```bash
 # Check mode and count
 # Run mode = 1 and mode = 2
@@ -43,4 +42,3 @@ tar cfJ gendata-250k-white.tar.xz out/*
 ```bash
 rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm /tmp/bdc_void/*
 ```
-
