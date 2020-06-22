@@ -1,7 +1,27 @@
 # ai-bdc
 monorepo for ai-bdc
 
-## Generating Data
+# Training
+- Install dependencies:
+```bash
+pip3 install -r requirements.txt
+```
+
+```bash
+python3 main.py --mode train --cuda True
+python3 main.py --mode test --cuda True
+python3 main.py --mode train --cuda True --warm-up True
+```
+
+## Train trick
+- 1e-4 lr train 30-epoch for warm-up
+- 2e-5 lr train about 10-epoch for fine tuning
+
+### References:
+- https://github.com/lsvih/Simple-Gimp-Captcha-Resolver
+- https://github.com/ypwhs/captcha_break
+
+# Generating Data
 
 1. Deploy a Digitalocean's CPU optimized Debian 9 droplet
 2. Convert dropted to Arch Linux by using this script: https://github.com/gh2o/digitalocean-debian-to-arch
