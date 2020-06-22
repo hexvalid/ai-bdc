@@ -1,6 +1,3 @@
-# ai-bdc
-monorepo for ai-bdc
-
 # Training
 - Install dependencies:
 ```bash
