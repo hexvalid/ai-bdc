@@ -66,5 +66,5 @@ tar cfJ gendata-count250k-style18.tar.xz out/
 
 8. Clean:
 ```bash
-rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm /tmp/bdc_void/*
+rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm -rf /tmp/bdc_void/ && mkdir /tmp/bdc_void/
 ```
