@@ -14,7 +14,14 @@ cd ai-bdc/gen
 mkdir out
 ```
 
-4. Prepare PHP-CGI:
+4. Change style (optional):
+```bash
+# Edit $STYLE=
+# -1 mean random
+nano php/botdetect-captcha-lib/botdetect/CaptchaIncludes.php
+```
+
+5. Prepare PHP-CGI:
 ```bash
 # Open up 10 php-cgi server via screen
 php -c php/php.ini -t php/ -S 127.0.0.1:9000
@@ -24,7 +31,7 @@ php -c php/php.ini -t php/ -S 127.0.0.1:9002
 php -c php/php.ini -t php/ -S 127.0.0.1:9009
 ```
 
-5. Run Generation Script:
+6. Run Generation Script:
 ```bash
 # Check mode and count
 # Run mode = 1 and mode = 2
@@ -35,12 +42,12 @@ nano gen.go
 go run gen.go
 ```
 
-6. Package:
+7. Package:
 ```bash
-tar cfJ gendata-250k-white.tar.xz out/*
+tar cfJ gendata-count250k-style18.tar.xz out/*
 ```
 
-7. Clean:
+8. Clean:
 ```bash
 rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm /tmp/bdc_void/*
 ```
