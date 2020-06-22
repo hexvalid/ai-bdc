@@ -11,7 +11,7 @@ pacman -S screen bash-completion go php php-cgi php-gd libjpeg libpng fontconfig
 git clone https://github.com/hexvalid/ai-bdc
 go get github.com/cheggaaa/pb/v3
 cd ai-bdc/gen
-mkdir out
+mkdir out && mkdir /tmp/bdc_void/
 ```
 
 4. Change style (optional):
