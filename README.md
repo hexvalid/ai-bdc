@@ -73,6 +73,6 @@ rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm -rf /tmp/bdc_void/ && mkdir /tmp/b
 ```bash
 go get github.com/github-release/github-release
 export GITHUB_TOKEN=...
-go/bin/github-release upload --user hexvalid --repo ai-bdc --tag gendatas --name "gendata-count250k-style18" --file gendata-count250k-style18.tar.xz
+go/bin/github-release upload --user hexvalid --repo ai-bdc --tag gendatas --name "gendata-count250k-style18.tar.xz" --file gendata-count250k-style18.tar.xz
 ```
 
