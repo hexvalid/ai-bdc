@@ -1,4 +1,15 @@
 # Training
+
+## Server Init
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install nvidia-410
+...
+
+```
+
+## Train
 - Install dependencies:
 ```bash
 pip3 install -r requirements.txt
@@ -66,7 +77,7 @@ tar cfJ gendata-count250k-style18.tar.xz out/
 
 8. Clean:
 ```bash
-rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm -rf /tmp/bdc_void/ && mkdir /tmp/bdc_void/
+  rm /tmp/bdc_pipe && touch /tmp/bdc_pipe && rm -rf /tmp/bdc_void/ && mkdir /tmp/bdc_void/
 ```
 
 9. Publish
