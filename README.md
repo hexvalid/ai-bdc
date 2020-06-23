@@ -2,23 +2,22 @@
 
 ## Server Init
 ```bash
-sudo apt update
-sudo apt upgrade
-sudo apt install nvidia-410
-...
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
+sudo apt-get install python3 python3-pip screen git -y
+CUDA_REPO_PKG=cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+wget -O /tmp/${CUDA_REPO_PKG} http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/${CUDA_REPO_PKG} 
+sudo dpkg -i /tmp/${CUDA_REPO_PKG}
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub 
+rm -f /tmp/${CUDA_REPO_PKG}
+sudo apt-get update
+sudo apt-get install cuda-drivers
 
-```
-
-## Train
-- Install dependencies:
-```bash
+git clone https://github.com/hexvalid/ai-bdc
+cd ai-bdc
 pip3 install -r requirements.txt
-```
 
-```bash
-python3 main.py --mode train --cuda True
-python3 main.py --mode test --cuda True
-python3 main.py --mode train --cuda True --warm-up True
 ```
 
 ## Train trick
