@@ -24,6 +24,7 @@ python3 main.py --mode train --cuda True --warm-up True
 ## Train trick
 ```bash
 python3 main.py --mode train --cuda True --lr 0.0001 --workers 16 --batch-size 128 --epoch 30
+python3 main.py --mode train --cuda True --lr 0.0001 --workers 16 --batch-size 128 --epoch 50 --warm-up True
 python3 main.py --mode train --cuda True --lr 0.00002 --workers 16 --batch-size 128 --epoch 10
 ```
 
