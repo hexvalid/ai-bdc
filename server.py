@@ -9,7 +9,8 @@ import torch
 import torch.nn as nn
 from waitress import serve
 
-model_file = '/home/hexvalid/Downloads/model.bin'
+listenaddr = '0.0.0.0'
+model_file = 'model.bin'
 characters = 'abcdefghijklmnopqrstuvwxyz'
 
 class CNNCTC(nn.Module):
@@ -109,4 +110,4 @@ if __name__ == '__main__':
     print('Loading model: '+model_file)
     model = load_model('cpu')
     model.eval()
-    serve(app, host='0.0.0.0', port=4200)
+    serve(app, host=listenaddr, port=4200)
